@@ -1,75 +1,100 @@
-<div align="center">
+# Karan Mondal - Portfolio Website
 
-# 🌐 Karan Mondal — Personal Portfolio Website
+Personal portfolio for Karan Mondal, a Data Analyst and Electronics & Telecommunication Engineering student. The site presents analytics work, embedded systems projects, experience, certifications, and contact details in a single responsive page.
 
-### Bridging the gap between physical hardware systems and data-driven insights.
+Live site: [karanmondal.netlify.app](https://karanmondal.netlify.app)
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-karanmondal.netlify.app-blue?style=for-the-badge)](https://karanmondal.netlify.app)
-[![Made With HTML](https://img.shields.io/badge/Made_with-HTML%2FCSS%2FJS-orange?style=for-the-badge&logo=html5)](https://github.com/KaranMondal/Portfolio-Website)
-[![Deployed on Netlify](https://img.shields.io/badge/Deployed_on-Netlify-00C7B7?style=for-the-badge&logo=netlify)](https://netlify.com)
+## Overview
 
-</div>
+The current portfolio uses a dark, space-inspired interface with gold highlights, animated signal lines, translucent panels, and a large circular profile presentation. It is intentionally built as a lightweight static site so it can be deployed directly to Netlify without a build pipeline.
 
----
+## Current Features
 
-## 👨‍💻 About This Project
+- Responsive single-page layout for desktop, tablet, and mobile screens
+- Fixed navigation with a mobile hamburger menu
+- Animated grid, signal-field background, marquee, orbiting social links, and reveal transitions
+- Hero actions for exploring work, contacting Karan, and downloading the CV
+- About section focused on the connection between data analysis and physical systems
+- Skills section with programming, analytics, databases, and embedded/IoT tools
+- Interactive skill lab that switches between analytics and engineering profiles
+- Experience timeline covering internships and engineering education
+- Selected work section with GitHub links for analytics, engineering, and automation projects
+- Certificate gallery with click-to-enlarge image previews and Escape-to-close support
+- Contact form submitted through Google Forms, with inline submission feedback
+- Direct email, LinkedIn, and GitHub contact links
 
-This is my **personal portfolio website** — a fully responsive, single-page application built from scratch using pure HTML, CSS, and JavaScript. Designed with a dark, technical aesthetic to reflect my dual expertise in **Data Analytics** and **Embedded Systems / IoT**.
+## Page Sections
 
----
+| Section | Purpose |
+| --- | --- |
+| Hero | Introduction, profile image, social links, CV download, and primary calls to action |
+| About | Background, working philosophy, and focus areas |
+| Skills | Tools and technologies used across analytics and embedded engineering |
+| Experience | Data analytics internships and B.E. education timeline |
+| Work | Selected projects with technology tags and repository links |
+| Certificates | Nine certificate images with modal previews |
+| Contact | Direct contact links and Google Forms message submission |
 
-## ✨ Features
+## Selected Work
 
-- 🌑 **Dark Theme** — Slate & blue accent design with noise texture and grid background
-- 🖱️ **Custom Cursor** — Animated cursor with a following ring effect
-- 📜 **Smooth Scroll Animations** — Scroll-triggered reveals on all sections
-- 📊 **Animated Skill Bars** — Progress bars animate on scroll into view
-- 🗂️ **Project Tab Filter** — Filter projects by IoT & Embedded or Data Science
-- 📱 **Fully Responsive** — Mobile-first design with hamburger nav
-- ⚡ **Zero Dependencies** — No frameworks, no libraries, pure vanilla code
+- **E-Commerce & Superstore Sales Analytics Platform** - Python and Pandas ETL with Power BI reporting for transaction, revenue, customer, and delivery analysis.
+- **HR Analytics & Attrition Intelligence Dashboard** - Workforce, headcount, salary, tenure, and attrition analysis in Power BI.
+- **FNP Orders & Sales Analytics Dashboard** - Interactive KPI and customer-insight dashboard for order and sales data.
+- **Credit Card Spending Analytics in India** - Spending-pattern analysis and dashboard-driven insights.
+- **Marketing Analytics Dashboard** - Marketing performance and campaign analysis.
+- **Social Media Engagement Analytics** - Analysis of platform, content, and publishing-time performance.
+- **RL Traffic Control System** - Reinforcement-learning approach to traffic-flow control.
+- **ErrorBot** - An automation and debugging-focused project.
 
----
+## Technology
 
-## 🗂️ Sections
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Google Fonts: Manrope and DM Mono
+- Icons8 tool icons
+- Google Forms for contact submissions
+- Netlify for deployment
 
-| Section | Description |
-|---|---|
-| 🏠 **Hero** | Name, title, tagline and call-to-action |
-| 👤 **About** | Background, domain cards, and quick tags |
-| 🛠️ **Skills** | Categorised skill bars + full tools chip row |
-| 💼 **Experience** | Timeline layout with internship details |
-| 🚀 **Projects** | 8 projects with tab filter by domain |
-| 🎓 **Education** | Degree card + 6 certifications |
-| 📬 **Contact** | Email, LinkedIn, GitHub, and phone |
+No framework, package manager, or local build command is required.
 
----
+## Project Structure
 
-## 🚀 Projects Showcased
+```text
+Portfolio-Website/
+├── index.html                 # Complete portfolio page, styles, and scripts
+├── avatar.jpg                 # Profile image
+├── Karan_Mondal.pdf           # Downloadable CV
+├── galaxy-bg.mp4              # Background media asset
+├── galaxy-preview.jpg         # Background preview asset
+├── certificates/              # Certificate images shown in the gallery
+├── netlify.toml               # Netlify publish configuration
+└── README.md
+```
 
-### 🔌 IoT & Embedded Systems
-- 🌾 **Fasal Kavach** — Autonomous pesticide rover · Smart India Hackathon 2025
-- 🛡️ **Smart IoT Safety System** — Multi-sensor real-time monitoring via Blynk
-- 🔐 **RFID Attendance & Access Control** — ESP32 + MongoDB/MySQL dual dashboard
-- 🏭 **Industrial Gas Leak Detection** — MQTT-based automated alert system
-- 🚗 **RC Car — Hardware Optimised** — Serial communication over WiFi/Blynk
+## Run Locally
 
-### 📊 Data Science & Analytics
-- 📣 **Marketing Analytics Dashboard** — Facebook campaign optimisation · Power BI
-- 📱 **Social Media Engagement Analytics** — EDA pipeline · 20% engagement uplift
-- 🚦 **RL Traffic Control System** — Reinforcement learning for urban traffic flow
+Because this is a static site, it can be opened directly in a browser. For a local server, run any static file server from the `Portfolio-Website` directory, for example:
 
----
+```powershell
+py -m http.server 8000
+```
 
-## 🛠️ Built With
+Then open [http://localhost:8000](http://localhost:8000).
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)
-![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=flat-square&logo=google&logoColor=white)
+## Deploy
 
-**Fonts:** Outfit (display) + Space Mono (monospace)
+The included `netlify.toml` configures the project root as the Netlify publish directory:
 
----
+```toml
+[build]
+	publish = "."
+```
 
-## 📁 Project Structure
+Deploy the `Portfolio-Website` directory to Netlify, or connect the repository and use `Portfolio-Website` as the site directory. No build command is needed.
+
+## Contact
+
+- Email: [karanmondal16@gmail.com](mailto:karanmondal16@gmail.com)
+- GitHub: [KaranMondal](https://github.com/KaranMondal)
+- LinkedIn: [mondal-karan](https://www.linkedin.com/in/mondal-karan)
