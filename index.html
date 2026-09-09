@@ -241,7 +241,7 @@ body{color:#fff}
 </head>
 <body>
 <div id="space"><video class="space-video" autoplay muted loop playsinline preload="auto" poster="galaxy-preview.jpg"><source src="galaxy-bg.mp4" type="video/mp4"></video><div class="space-shade"></div></div><div class="noise"></div>
-<header class="nav"><a class="brand" href="#home">KARAN<span>.</span></a><nav class="navlinks"><a href="#story">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#certificates">Certificates</a></nav><a class="nav-cta" href="#contact">Let's talk Ã¢â€ &mdash;</a></header>
+<header class="nav"><a class="brand" href="#home">KARAN<span>.</span></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="navlinks"><a href="#story">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a></nav><a class="nav-cta" href="#contact">Let's talk Ã¢â€ &mdash;</a></header>
 <main>
 <section class="hero wrap" id="home"><div class="hero-grid"><div class="reveal"><div class="eyebrow">Data Analyst Ãƒ&mdash; Engineer</div><h1><span class="dim">HELLO,</span><span class="glow">I'M KARAN.</span></h1><p class="hero-copy">I turn <b>messy data into clear insights</b> and <b>circuits into intelligent systems</b> Ã¢â‚¬â€ combining analytics, business thinking and hands-on engineering.</p><div class="hero-actions"><a class="btn primary" href="#work">Explore my work Ã¢â€ â€œ</a><a class="btn ghost" href="#contact">Get in touch Ã¢â€ &mdash;</a><a class="btn ghost" href="Karan_Mondal.pdf" download>Download CV Ã¢â€ â€œ</a></div></div><div class="avatar-wrap reveal"><div class="orbit"><a class="orbit-link github" href="https://github.com/KaranMondal" target="_blank" rel="noopener" aria-label="Visit Karan Mondal on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 018 4.8c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a class="orbit-link linkedin" href="https://www.linkedin.com/in/mondal-karan" target="_blank" rel="noopener" aria-label="Visit Karan Mondal on LinkedIn">in</a><a class="orbit-link email" href="mailto:karanmondal16@gmail.com" aria-label="Email Karan Mondal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3zM3 6l9 7 9-7"/></svg></a></div><div class="avatar-ring"><div class="avatar-inner"><img src="avatar.jpg" alt="Karan Mondal"></div></div><div class="hero-note"><strong>Currently building</strong>Data + engineering stories<br>that people can act on.</div></div></div></section>
 <div class="marquee"><div class="marquee-track"><span>PYTHON</span><i>Ã¢Å“Â¦</i><span>SQL</span><i>Ã¢Å“Â¦</i><span>POWER BI</span><i>Ã¢Å“Â¦</i><span>TABLEAU</span><i>Ã¢Å“Â¦</i><span>EMBEDDED C</span><i>Ã¢Å“Â¦</i><span>ESP32</span><i>Ã¢Å“Â¦</i><span>PYTHON</span><i>Ã¢Å“Â¦</i><span>SQL</span><i>Ã¢Å“Â¦</i><span>POWER BI</span><i>Ã¢Å“Â¦</i><span>TABLEAU</span><i>Ã¢Å“Â¦</i><span>EMBEDDED C</span><i>Ã¢Å“Â¦</i><span>ESP32</span><i>Ã¢Å“Â¦</i></div></div>
@@ -307,5 +307,21 @@ contactForm?.addEventListener('submit', () => {
     formStatus.textContent = 'Thanks - your message has been sent.';
   }, 0);
 });
-</script><style>.orbit:after{content:'+'}</style></body></html>
+const nav = document.querySelector('.nav');
+const menuToggle = document.querySelector('.menu-toggle');
+const closeMenu = () => { nav.classList.remove('menu-open'); menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.setAttribute('aria-label', 'Open navigation'); };
+menuToggle.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('menu-open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+});
+nav.querySelectorAll('.navlinks a').forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('click', event => { if (!nav.contains(event.target)) closeMenu(); });
+document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+</script><style>
+.menu-toggle{display:none;border:1px solid rgba(246,196,83,.55);border-radius:10px;background:rgba(255,255,255,.06);color:#fff;width:40px;height:36px;padding:8px;cursor:pointer;place-items:center;gap:4px}.menu-toggle span{display:block;width:18px;height:2px;background:#ffd978;border-radius:2px;transition:transform .2s,opacity .2s}.nav.menu-open .menu-toggle span:first-child{transform:translateY(6px) rotate(45deg)}.nav.menu-open .menu-toggle span:nth-child(2){opacity:0}.nav.menu-open .menu-toggle span:last-child{transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:900px){.menu-toggle{display:grid}.nav{border-radius:18px;flex-wrap:wrap}.navlinks{display:none}.nav.menu-open .navlinks{display:flex;position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;gap:0;padding:8px;border:1px solid rgba(196,154,255,.35);border-radius:18px;background:rgba(7,5,18,.97);box-shadow:0 18px 45px rgba(0,0,0,.4)}.nav.menu-open .navlinks a{padding:12px 14px;border-radius:10px}.nav.menu-open .navlinks a:hover{background:rgba(246,196,83,.12)}}
+@media(max-width:560px){.nav-cta{display:none}}
+.orbit:after{content:'+'}
+</style></body></html>
 
