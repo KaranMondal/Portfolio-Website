@@ -268,7 +268,9 @@ body{color:#fff}
         <div class="form-grid">
           <label>Name<input type="text" name="entry.1979968684" autocomplete="name" placeholder="Your name" required></label>
           <label>Email<input type="email" name="entry.1099629999" autocomplete="email" placeholder="you@example.com" required></label>
-          <label>Subject<input type="text" name="entry.1820332714" placeholder="What can I help with?" required></label>
+          <label>Phone number <span class="optional-label">(optional)</span><input type="tel" name="entry.PHONE_ENTRY_ID" autocomplete="tel" inputmode="tel" placeholder="Your phone number"></label>
+          <label>Subject<select name="entry.1820332714" id="subject" required><option value="" disabled selected>Select a subject</option><option>Data Analyst</option><option>Embedded Engineer</option><option>Business Analyst</option><option>Others</option></select></label>
+          <label class="other-subject" id="otherSubject" hidden>Tell me more<input type="text" name="entry.OTHER_SUBJECT_ENTRY_ID" id="otherSubjectInput" placeholder="Please describe your request"></label>
           <label class="message-field">Message<textarea name="entry.1375133544" placeholder="Tell me a little about your idea..." required></textarea></label>
         </div>
         <button class="send-btn" type="submit">Send Message</button>
@@ -288,6 +290,8 @@ const modal=document.getElementById('modal'),modalImg=document.getElementById('m
 const projectRepos={'Credit Card Spending Analytics in India':'https://github.com/KaranMondal/Credit-Card-Spending-in-India---Data_Analysis','Marketing Analytics Dashboard':'https://github.com/KaranMondal/Marketing-Company-Dataset','Social Media Engagement Analytics':'https://github.com/KaranMondal/Social-Media-Engagement-Analysis','RFID Attendance & Access Control':'https://github.com/KaranMondal/RFID-Attendance-and-Access-Control-System','Industrial Gas Leak Detection':'https://github.com/KaranMondal/Industrial-Gas-Leak-Detection-and-Alert-System'};document.querySelectorAll('.project').forEach(project=>{const title=project.querySelector('h3').textContent.trim(),url=projectRepos[title];if(url&&!project.querySelector('.repo')){const link=document.createElement('a');link.className='repo';link.href=url;link.target='_blank';link.rel='noopener';link.textContent='View on GitHub Ã¢â€ &rsquo;';project.append(link)}});
 const contactForm=document.getElementById('contactForm'),formStatus=document.getElementById('formStatus');
 contactForm.addEventListener('submit',()=>{const button=contactForm.querySelector('button[type="submit"]');button.disabled=true;button.textContent='SendingÃ¢â‚¬Â¦';formStatus.className='form-status';formStatus.textContent='Thanks Ã¢â‚¬â€ your message has been sent.';setTimeout(()=>{contactForm.reset();button.disabled=false;button.textContent='Send Message'},700)});
+const subjectSelect=document.getElementById('subject'),otherSubject=document.getElementById('otherSubject'),otherSubjectInput=document.getElementById('otherSubjectInput');
+subjectSelect.addEventListener('change',()=>{const isOther=subjectSelect.value==='Others';otherSubject.hidden=!isOther;otherSubjectInput.required=isOther;if(!isOther)otherSubjectInput.value=''});
 
 const cleanText = value => value.replace(/(?:[\u00c3\u00c2\u00e2][^\sA-Za-z0-9]*)+/g, ' ');
 const cleanPageText = () => {
@@ -319,6 +323,7 @@ nav.querySelectorAll('.navlinks a').forEach(link => link.addEventListener('click
 document.addEventListener('click', event => { if (!nav.contains(event.target)) closeMenu(); });
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
 </script><style>
+.form-grid select{width:100%;margin-top:7px;border:1px solid rgba(196,154,255,.22);border-radius:8px;background:rgba(255,255,255,.07);color:#fff;padding:12px 13px;font:400 12px Manrope;outline:none}.form-grid select option{background:#100a1d;color:#fff}.form-grid select:focus{border-color:rgba(246,196,83,.75);box-shadow:0 0 0 3px rgba(246,196,83,.10)}.optional-label{font:400 9px 'DM Mono';color:#cfc5df}.other-subject{grid-column:1 / -1}.other-subject[hidden]{display:none}
 .menu-toggle{display:none;border:1px solid rgba(246,196,83,.55);border-radius:10px;background:rgba(255,255,255,.06);color:#fff;width:40px;height:36px;padding:8px;cursor:pointer;place-items:center;gap:4px}.menu-toggle span{display:block;width:18px;height:2px;background:#ffd978;border-radius:2px;transition:transform .2s,opacity .2s}.nav.menu-open .menu-toggle span:first-child{transform:translateY(6px) rotate(45deg)}.nav.menu-open .menu-toggle span:nth-child(2){opacity:0}.nav.menu-open .menu-toggle span:last-child{transform:translateY(-6px) rotate(-45deg)}
 @media(max-width:900px){.menu-toggle{display:grid}.nav{border-radius:18px;flex-wrap:wrap}.navlinks{display:none}.nav.menu-open .navlinks{display:flex;position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;gap:0;padding:8px;border:1px solid rgba(196,154,255,.35);border-radius:18px;background:rgba(7,5,18,.97);box-shadow:0 18px 45px rgba(0,0,0,.4)}.nav.menu-open .navlinks a{padding:12px 14px;border-radius:10px}.nav.menu-open .navlinks a:hover{background:rgba(246,196,83,.12)}}
 @media(max-width:560px){.nav-cta{display:none}}
