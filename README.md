@@ -2,26 +2,39 @@
 
 Personal portfolio for Karan Mondal, a Data Analyst and Electronics & Telecommunication Engineering student. The site presents analytics work, embedded systems projects, experience, certifications, and contact details in a single responsive page.
 
-Live site: [karanmondal.netlify.app](https://karanmondal.netlify.app)
+<p align="center">
+	<a href="https://karanmondal.netlify.app"><img src="https://img.shields.io/badge/Live%20Portfolio-karanmondal.netlify.app-f6c453?style=for-the-badge&logo=netlify&logoColor=white" alt="Open live portfolio"></a>
+	<a href="https://github.com/KaranMondal/Portfolio-Website"><img src="https://img.shields.io/badge/View%20Source-GitHub-181717?style=for-the-badge&logo=github" alt="View source on GitHub"></a>
+	<a href="Karan_Mondal.pdf"><img src="https://img.shields.io/badge/Download-CV-c98a2e?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Download CV"></a>
+	<a href="mailto:karanmondal16@gmail.com"><img src="https://img.shields.io/badge/Contact-Email-6d4aff?style=for-the-badge&logo=gmail&logoColor=white" alt="Send an email"></a>
+</p>
+
+<p align="center">
+	<a href="#overview">Overview</a> &nbsp;|&nbsp;
+	<a href="#features">Features</a> &nbsp;|&nbsp;
+	<a href="#selected-work">Projects</a> &nbsp;|&nbsp;
+	<a href="#run-locally">Run locally</a> &nbsp;|&nbsp;
+	<a href="#contact">Contact</a>
+</p>
 
 ## Overview
 
 The current portfolio uses a dark, space-inspired interface with gold highlights, animated signal lines, translucent panels, and a large circular profile presentation. It is intentionally built as a lightweight static site so it can be deployed directly to Netlify without a build pipeline.
 
-## Current Features
+## Features
 
-- Responsive single-page layout for desktop, tablet, and mobile screens
-- Fixed navigation with a mobile hamburger menu
-- Animated grid, signal-field background, marquee, orbiting social links, and reveal transitions
-- Hero actions for exploring work, contacting Karan, and downloading the CV
-- About section focused on the connection between data analysis and physical systems
-- Skills section with programming, analytics, databases, and embedded/IoT tools
-- Interactive skill lab that switches between analytics and engineering profiles
-- Experience timeline covering internships and engineering education
-- Selected work section with GitHub links for analytics, engineering, and automation projects
-- Certificate gallery with click-to-enlarge image previews and Escape-to-close support
-- Contact form submitted through Google Forms, with inline submission feedback
-- Direct email, LinkedIn, and GitHub contact links
+- &#128241; Responsive single-page layout for desktop, tablet, and mobile screens
+- &#9776; Fixed navigation with a mobile hamburger menu
+- &#10024; Animated grid, signal-field background, marquee, orbiting social links, and reveal transitions
+- &#128640; Hero actions for exploring work, contacting Karan, and downloading the CV
+- &#128161; About section focused on the connection between data analysis and physical systems
+- &#128187; Skills section with programming, analytics, databases, and embedded/IoT tools
+- &#128260; Interactive skill lab that switches between analytics and engineering profiles
+- &#128203; Experience timeline covering internships and engineering education
+- &#128200; Selected work section with GitHub links for analytics, engineering, and automation projects
+- &#127891; Certificate gallery with click-to-enlarge image previews and Escape-to-close support
+- &#9993; Contact form submitted through Google Forms, with inline submission feedback
+- &#128222; Direct email, LinkedIn, and GitHub contact links
 
 ## Page Sections
 
